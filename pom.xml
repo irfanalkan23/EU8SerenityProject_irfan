@@ -20,7 +20,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
-            <version>3.3.4</version>
+            <version>2.4.4</version>
         </dependency>
 
         <!--        this is the dependency that wrap up rest assured with additional serenity support-->
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-rest-assured</artifactId>
-            <version>3.3.4</version>
+            <version>2.4.4</version>
         </dependency>
 
         <!-- Junit 5 dependency -->
@@ -44,6 +44,19 @@
             <groupId>io.github.fabianlinz</groupId>
             <artifactId>serenity-junit5</artifactId>
             <version>1.6.0</version>
+        </dependency>
+
+        <!-- to get rid of the error messages, and shows the Serenity ads -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
         </dependency>
 
     </dependencies>
