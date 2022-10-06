@@ -7,20 +7,24 @@ import java.util.Map;
 
 public class SpartanUtil {
 
-    public static Map<String,Object> spartanJsonBodyMap(){
-        Map<String,Object> requestJsonMap = new LinkedHashMap<>();
-        Faker faker = new Faker();
+    public static Faker faker = new Faker();
 
-        requestJsonMap.put("name", faker.name().firstName());
+    public static Map<String,Object> getRandomSpartanMap(){
 
-        if (faker.random().nextBoolean().equals(true)){
-            requestJsonMap.put("gender", "Male");
-        } else {
-            requestJsonMap.put("gender", "Female");
-        }
+        Map<String,Object> bodyMap = new LinkedHashMap<>();
 
-        requestJsonMap.put("phone", faker.numerify("##########"));
+        bodyMap.put("name", faker.name().firstName());
 
-        return requestJsonMap;
+//        if (faker.random().nextBoolean().equals(true)){
+//            bodyMap.put("gender", "Male");
+//        } else {
+//            bodyMap.put("gender", "Female");
+//        }
+
+        bodyMap.put("gender", faker.demographic().sex());
+
+        bodyMap.put("phone", faker.number().numberBetween(5_000_000_000L, 10_000_000_000L  ));
+
+        return bodyMap;
     }
 }
