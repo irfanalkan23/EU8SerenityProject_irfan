@@ -63,9 +63,11 @@ public class SpartanEditorPostTest extends SpartanNewBase {
         Ensure.that("phone is correct",
                 thenPart -> thenPart.body("data.phone",is(bodyMap.get("phone"))));
 
+        //get id and save
         String id = lastResponse().jsonPath().getString("data.id");
+        //check location header ends with newly generated id
         Ensure.that("check location header ends with newly generated id",
-                vR -> vR.header("Location",endsWith(id)));
+                vR -> vR.header("Location",endsWith(id)));      //endsWith() : hamcrest matcher
     }
 
 }
