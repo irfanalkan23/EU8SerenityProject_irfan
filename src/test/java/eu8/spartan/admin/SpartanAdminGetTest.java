@@ -16,6 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static net.serenitybdd.rest.SerenityRest.given;
 
+@Disabled   //I don't want to run this when running BookitEnvTest with Maven "verity"
 @SerenityTest
 public class SpartanAdminGetTest {
 
